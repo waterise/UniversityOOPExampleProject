@@ -4,12 +4,12 @@
 class Manager {
 public:
 	double getMaxMark(Student* students, int length) {
-		double max = students[0].mark;
+		double max = students[0].getMark;
 
 		for (int i = 1; i < length; i++)
 		{
-			if (max < students[i].mark) {
-				max = students[i].mark;
+			if (max < students[i].getMark) {
+				max = students[i].getMark;
 			}
 		}
 
@@ -17,12 +17,12 @@ public:
 	}
 
 	double getMinMark(Student* students, int length) {
-		double min = students[0].mark;
+		double min = students[0].getMark;
 
 		for (int i = 1; i < length; i++)
 		{
-			if (min < students[i].mark) {
-				min = students[i].mark;
+			if (min < students[i].getMark) {
+				min = students[i].getMark;
 			}
 		}
 

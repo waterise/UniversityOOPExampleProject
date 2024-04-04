@@ -5,10 +5,13 @@
 using namespace std;
 
 class Student {
+private:
+string name;
+int age;
+double mark;
 public:
-	string name;
-	int age;
-	double mark;
+
+
 
 	// default constructor (конструктор по умолчанию)
 	Student() {
@@ -55,6 +58,31 @@ public:
 		cout << "calling destructor" << endl;
 		//delete[] mark;
 	}
+	string getName() {
+		return name;
+	}
+	void setName(string nm) {
+		name = nm;
+	}
+	int getAge() {
+		return age;
+	}
+
+	void setAge(int a) {
+		if (a > 0 && a < 90) {
+			age = a;
+		}
+	}
+	double getMark() {
+		return mark;
+	}
+	void setMark(double m) {
+		if (m > 0 && m <= 10) {
+			mark = m;
+		}
+	}
+
+
 
 	string convert() {
 		string s = "";
